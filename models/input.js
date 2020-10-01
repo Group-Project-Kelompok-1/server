@@ -17,10 +17,6 @@ module.exports = (sequelize, DataTypes) => {
     type: {
       type: DataTypes.STRING,
       validate: {
-        notNull: {
-          args: true,
-          msg: 'cannot be empty'
-        },
         notEmpty: {
           args: true,
           msg: 'cannot be empty'
@@ -30,10 +26,6 @@ module.exports = (sequelize, DataTypes) => {
     snack: {
       type: DataTypes.STRING,
       validate: {
-        notNull: {
-          args: true,
-          msg: 'cannot be empty'
-        },
         notEmpty: {
           args: true,
           msg: 'cannot be empty'
