@@ -11,11 +11,13 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      List.belongsTo(models.User)
     }
   };
   List.init({
     type: DataTypes.STRING,
-    snack: DataTypes.STRING
+    snack: DataTypes.STRING,
+    UserId:DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'List',

@@ -8,10 +8,22 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      type: {
+      genre: {
         type: Sequelize.STRING
       },
       snack: {
+        type: Sequelize.STRING
+      },
+      imdbid: {
+        type: Sequelize.STRING
+      },
+      imdbrating: {
+        type: Sequelize.STRING
+      },
+      title: {
+        type: Sequelize.STRING
+      },
+      url: {
         type: Sequelize.STRING
       },
       createdAt: {
