@@ -23,7 +23,10 @@ module.exports = {
       title: {
         type: Sequelize.STRING
       },
-      url: {
+      imgUrl: {
+        type: Sequelize.STRING
+      },
+      zomatoUrl: {
         type: Sequelize.STRING
       },
       createdAt: {

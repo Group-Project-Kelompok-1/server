@@ -15,9 +15,14 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   List.init({
-    type: DataTypes.STRING,
+    genre: DataTypes.STRING,
     snack: DataTypes.STRING,
-    UserId:DataTypes.INTEGER
+    imdbid:DataTypes.STRING,
+    imdbrating:DataTypes.STRING,
+    title:DataTypes.STRING,
+    imgUrl:DataTypes.STRING,
+    zomatoUrl:DataTypes.STRING,
+    UserId:DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'List',

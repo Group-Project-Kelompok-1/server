@@ -4,7 +4,6 @@ const express = require('express')
 const app = express()
 const PORT = 3000
 const cors = require('cors')
-
 const userRoutes = require('./routes/users')
 
 const errorHandler = require('./middlewares/errorHandler')
