@@ -2,7 +2,7 @@ const { User, List } = require('../models')
 
 class ListController {
   static showAll(req, res, next) {
-    Todo.findAll({
+    List.findAll({
       where: {
         UserId: req.decodedUser.id
       }
