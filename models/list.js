@@ -17,15 +17,18 @@ module.exports = (sequelize, DataTypes) => {
   List.init({
     genre: DataTypes.STRING,
     snack: DataTypes.STRING,
-    imdbid:DataTypes.STRING,
-    imdbrating:DataTypes.STRING,
-    title:DataTypes.STRING,
-    imgUrl:DataTypes.STRING,
-    zomatoUrl:DataTypes.STRING,
-    UserId:DataTypes.INTEGER,
+    imdbid: DataTypes.STRING,
+    imdbrating: DataTypes.STRING,
+    title: DataTypes.STRING,
+    imgUrl: DataTypes.STRING,
+    zomatoUrl: DataTypes.STRING,
+    UserId: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'List',
   });
+  List.beforeCreate(list => {
+    list.imdbid = `https://www.imdb.com/title/${list.imdbid}/`
+  })
   return List;
 };
