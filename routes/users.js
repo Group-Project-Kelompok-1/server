@@ -8,4 +8,6 @@ router.post('/register', UserController.register)
 router.post('/login', UserController.login)
 router.get('/moviessnack', authentication, ListController.showAll)
 router.post('/moviessnack',authentication, thirdPartyController.getMoviesSnack)
+router.post('/googleSignIn', UserController.googleSignIn)
+
 module.exports = router
