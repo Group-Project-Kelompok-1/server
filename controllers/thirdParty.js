@@ -41,6 +41,7 @@ class thirdPartyController {
               }
             })
               .then(data => {
+                // res.status(201).json({})
                 console.log(data)
               })
           })
@@ -68,6 +69,28 @@ class thirdPartyController {
       })
       .catch(err => {
         console.log(err)
+      })
+  }
+
+  static getJoke(req, res, next) {
+    axios({
+      "method": "GET",
+      "url": "https://joke3.p.rapidapi.com/v1/joke",
+      "headers": {
+        "content-type": "application/octet-stream",
+        "x-rapidapi-host": "joke3.p.rapidapi.com",
+        "x-rapidapi-key": "57d2b3a3acmshb7f10219925d6bfp197592jsnc6d6312c015e",
+        "useQueryString": true
+      }
+    })
+      .then((response) => {
+        let content = response.data.content
+        console.log(content)
+        res.status(200).json({ content })
+      })
+      .catch((error) => {
+        console.log(error)
+        next(error)
       })
   }
 }

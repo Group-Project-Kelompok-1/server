@@ -9,5 +9,6 @@ router.post('/login', UserController.login)
 router.get('/moviessnack', authentication, ListController.showAll)
 router.post('/moviessnack',authentication, thirdPartyController.getMoviesSnack)
 router.post('/googleSignIn', UserController.googleSignIn)
+router.get('/joke', authentication, thirdPartyController.getJoke)
 
 module.exports = router

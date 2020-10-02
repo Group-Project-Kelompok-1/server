@@ -71,15 +71,15 @@ class UserController {
     })
     .then(ticket => {
       const payload = ticket.getPayload()
+      console.log(payload);
       email = payload.email
-      User.findOne({
+      return User.findOne({
         where : {
           email
         }
       })
     })
     .then(user => {
-      console.log(user);
         if(!user){
           return User.create({
             email,
